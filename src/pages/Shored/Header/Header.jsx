@@ -3,6 +3,7 @@ import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import logo from "../../../assets/logo2.png";
+import './Header.css';
 const Header = () => {
   return (
     <Container>
@@ -13,7 +14,7 @@ const Header = () => {
         </h5>
         <h4>{moment().format("dddd, MMMM D, YYYY, h:mm:ss a")}</h4>
       </div>
-      <div className="d-flex mt-4 bg-secondary p-3">
+      <div className="d-flex mt-5 bg-secondary rounded-1 p-3">
         <Button variant="danger p-3 fw-bold">Latest</Button>
         <Marquee speed={90}>
           <h3 className="text-white">
@@ -28,12 +29,12 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto fw-bold">
-            <Nav.Link href="#features">Home</Nav.Link>
-            <Nav.Link href="#pricing">About</Nav.Link>
-            <Nav.Link href="#career">Career</Nav.Link>
+            <Nav.Link className="nav-manu"  href="#features">Home</Nav.Link>
+            <Nav.Link className="nav-manu" href="#pricing">About</Nav.Link>
+            <Nav.Link className="nav-manu" href="#career">Career</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Profile</Nav.Link>
+            <Nav.Link className="nav-manu" href="#deets">Profile</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
             <Button variant="secondary">Login</Button>
             </Nav.Link>
