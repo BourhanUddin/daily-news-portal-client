@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../pages/Shored/Footer/Footer";
 import Header from "../pages/Shored/Header/Header";
-import LeftNav from "../pages/Shored/LeftNav";
+import LeftNav from "../pages/Shored/LeftNav/LeftNav";
 import RightNav from "../pages/Shored/RightNav/RightNav";
 
 const Main = () => {

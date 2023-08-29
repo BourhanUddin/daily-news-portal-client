@@ -14,14 +14,14 @@ const Header = () => {
         </h5>
         <h4>{moment().format("dddd, MMMM D, YYYY, h:mm:ss a")}</h4>
       </div>
-      <div className="d-flex mt-5 bg-secondary rounded-1 p-3">
-        <Button variant="danger p-3 fw-bold">Latest</Button>
+      <div className="d-flex mt-5 bg-secondary rounded-1 p-1">
+        <Button variant="danger p-1 ">Latest</Button>
         <Marquee speed={90}>
-          <h3 className="text-white">
+          <h5 className="text-white ">
             Stay tuned for more details as we uncover the latest revelations in
             this groundbreaking discovery. Our dedicated team is working around
             the clock to bring you the most accurate and up-to-date information
-          </h3>
+          </h5>
         </Marquee>
       </div>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
