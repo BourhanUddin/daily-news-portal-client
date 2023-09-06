@@ -1,12 +1,27 @@
 import moment from "moment";
 import React from "react";
 import { Card, Image } from "react-bootstrap";
-import { FaBookmark, FaRegEye, FaShareAlt } from "react-icons/fa";
+import {
+  FaBookmark,
+  FaRegEye,
+  FaRegStar,
+  FaShareAlt,
+  FaStar,
+} from "react-icons/fa";
+import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
-  const { _id, image_url, title, total_view, author, published_date, details } =
-    news;
+  const {
+    _id,
+    image_url,
+    title,
+    rating,
+    total_view,
+    author,
+    published_date,
+    details,
+  } = news;
   return (
     <>
       <Card className="mt-2">
@@ -39,9 +54,23 @@ const NewsCard = ({ news }) => {
             )}
           </Card.Text>
         </Card.Body>
-        <Card.Footer className="text-muted align-items-center d-flex">
+        <Card.Footer className=" align-items-center d-flex">
           <div className="flex-grow-1">
-            <h1>gg</h1>
+            <Rating
+            className="text-danger align-items-center p-2"
+            readonly
+             placeholderRating={rating?.number}
+             emptySymbol={<FaRegStar></FaRegStar>}
+             placeholderSymbol={<FaStar></FaStar>}
+             fullSymbol={<FaStar></FaStar>}
+            ></Rating>
+          
+            {/* <StarRatings
+              placeholderRating={rating?.number}
+              emptySymbol={<FaRegStar></FaRegStar>}
+              placeholderSymbol={<FaStar></FaStar>}
+            /> */}
+            <span>{rating?.number}</span>
           </div>
           <div className="">
             <FaRegEye></FaRegEye> {total_view}
