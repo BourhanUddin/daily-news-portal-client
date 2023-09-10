@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import EditorsInsights from "../../News/EditorsInsights/EditorsInsights";
+import SportsInsights from "../SportsInsights/SportsInsights";
 
 const LeftNav = () => {
   // get data from server site
@@ -26,6 +28,7 @@ const LeftNav = () => {
           </p>
         ))}
       </div>
+      <SportsInsights></SportsInsights>
     </div>
   );
 };
