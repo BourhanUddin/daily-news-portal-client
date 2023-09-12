@@ -4,12 +4,14 @@ import { Outlet } from "react-router-dom";
 import Footer from "../pages/Shored/Footer/Footer";
 import Header from "../pages/Shored/Header/Header";
 import LeftNav from "../pages/Shored/LeftNav/LeftNav";
+import NavigationBar from "../pages/Shored/NavigationBar/NavigationBar";
 import RightNav from "../pages/Shored/RightNav/RightNav";
 
 const Main = () => {
   return (
     <div>
       <Header></Header>
+      <NavigationBar></NavigationBar>
       <Container>
         <Row>
           <Col lg={3}>
