@@ -5,6 +5,8 @@ import Category from "../pages/Home/Category/Category";
 import Home from "../pages/Home/Home/Home";
 import News from "../pages/News/News";
 import LoginLayout from "../layouts/LoginLayout";
+import Login from "../pages/Home/login/login/login";
+import Register from "../pages/Home/login/register/register";
 
 const router = createBrowserRouter([
     {
@@ -12,8 +14,16 @@ const router = createBrowserRouter([
         element: <LoginLayout></LoginLayout>,
         children:[
             {
+                path:"/",
+                element: <Navigate to="/category/0"></Navigate>
+            },
+            {
                 path: 'login',
-                element:<Log
+                element: <Login></Login>
+            },
+            {
+                path: 'register',
+                element: <Register></Register>
             }
         ]
     },
