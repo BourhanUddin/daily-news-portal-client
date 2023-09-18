@@ -13,7 +13,7 @@ const NavigationBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Nav className="mx-auto  fw-bold">
-            <Link className="text-decoration-none p-2 text-black" to={"/"}>
+            <Link className="text-decoration-none p-2 text-black" to={"/category/0"}>
               Home
             </Link>
             <Link className="text-decoration-none p-2 text-black">About</Link>
