@@ -1,0 +1,15 @@
+.AboutBackground {
+  height: 100vh;
+  width: 100;
+  background-image: linear-gradient(
+    to top,
+    #d172af,
+    #bd6fbe,
+    #9f70cc,
+    #7472d8,
+    #1876e0
+  );
+}
+.div p {
+  font-size: 100px;
+}

@@ -8,7 +8,7 @@ const Header = () => {
   
   return (
     <Container>
-      <div className="div text-center">
+      <div className="text-center">
         <img className="mt-4" src={logo} alt="" />
         <h5 className="mt-2 text-secondary">
           Your Source for Today's News, Tomorrow's Insights.

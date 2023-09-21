@@ -7,6 +7,7 @@ import News from "../pages/News/News";
 import LoginLayout from "../layouts/LoginLayout";
 import Login from "../pages/Home/login/login/login";
 import Register from "../pages/Home/login/register/register";
+import About from "../pages/Home/About/About";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path:"/",
                 element: <Navigate to="/category/0"></Navigate>
+            },
+            {
+                path:"about",
+                element:<About></About>
             },
             {
                 path: 'login',

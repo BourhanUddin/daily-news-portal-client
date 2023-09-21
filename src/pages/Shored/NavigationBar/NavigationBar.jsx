@@ -1,8 +1,8 @@
-import React, { useCallback, useContext } from "react";
+import React, { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
-import { FaUserCircle } from "react-icons/fa";
 
 const NavigationBar = () => {
   const { user } = useContext(AuthContext);
@@ -16,8 +16,8 @@ const NavigationBar = () => {
             <Link className="text-decoration-none p-2 text-black" to={"/category/0"}>
               Home
             </Link>
-            <Link className="text-decoration-none p-2 text-black">About</Link>
             <Link className="text-decoration-none p-2 text-black">Career</Link>
+            <Link to={"/about"} className="text-decoration-none p-2 text-black">About</Link>
           </Nav>
 
           {user && (
@@ -31,7 +31,6 @@ const NavigationBar = () => {
             <Button variant="secondary">Logout</Button>
           ) : (
             <Link to={"/login"}>
-              {" "}
               <Button variant="secondary">Login</Button>
             </Link>
           )}
