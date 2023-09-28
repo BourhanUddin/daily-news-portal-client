@@ -12,15 +12,15 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-   if(!email || !password){
-    console.log('please enter both email and password');
-    return;
-   }
+    if (!email || !password) {
+      console.log("please enter both email and password");
+      return;
+    }
     signIn(email, password)
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        navigate('/category/0');
+        navigate("/category/0");
       })
       .catch((error) => {
         console.log(error);
