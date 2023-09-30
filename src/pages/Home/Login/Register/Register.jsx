@@ -15,7 +15,7 @@ const Register = () => {
     const password = form.password.value;
 
     // Add validation checks here
-    if (!name || !email || !password) {
+    if (!name || !email || !photo || !password) {
       console.log("Please fill in all required fields");
       return;
     }
