@@ -97,7 +97,7 @@ const Register = () => {
           <Form.Check
             type="checkbox"
             name="accept"
-            label="Accept Terms & Conditions"
+            label={<>Accept<Link style={{ textDecoration: 'none', color: 'tomato' }} to={'/termsconditons'}> Terms & Conditions</Link></>}
           />
         </Form.Group>
         <Button className="w-100" variant="primary" type="submit">

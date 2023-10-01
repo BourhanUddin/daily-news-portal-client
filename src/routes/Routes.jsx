@@ -4,10 +4,11 @@ import Main from "../layouts/Main";
 import NewsLayout from "../layouts/NewsLayout";
 import About from "../pages/Home/About/About";
 import Category from "../pages/Home/Category/Category";
-import Login from "../pages/Home/login/login/login";
-import Register from "../pages/Home/login/register/register";
+import Login from "../pages/Home/Login/Login/Login";
+import Register from "../pages/Home/Login/Register/Register";
 import News from "../pages/News/News";
 import PrivateRoutes from "./PrivateRoutes";
+import TermCondition from "../pages/Shored/Term&Condition/TermCondition";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
+            },
+            {
+                path:'termsconditons',
+                element:<TermCondition></TermCondition>
             }
         ]
     },
