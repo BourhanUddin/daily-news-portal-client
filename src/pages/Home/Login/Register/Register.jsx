@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../../Providers/AuthProvider";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
-
+  const [accepted, SetAccepted] = useState(false);
   const handleRegister = async (event) => {
     event.preventDefault();
     const form = event.target;
@@ -40,6 +40,10 @@ const Register = () => {
       console.log("Registration failed", error);
     }
   };
+
+  const handleAccepted =event=>{
+    SetAccepted(event.target.checked)
+  }
   // console.log(name, email, photo, password);
   // createUser(email, password)
   //   .then((result) => {
@@ -95,12 +99,13 @@ const Register = () => {
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Check
+            onClick={handleAccepted}
             type="checkbox"
             name="accept"
             label={<>Accept<Link style={{ textDecoration: 'none', color: 'tomato' }} to={'/termsconditons'}> Terms & Conditions</Link></>}
           />
         </Form.Group>
-        <Button className="w-100" variant="primary" type="submit">
+        <Button disabled={!accepted} className="w-100" variant="primary" type="submit">
           Register
         </Button>
         <br />
